@@ -64,5 +64,5 @@ activity_desc = sapply(alldata_with_mean$activity_lables, function (activity) {
 alldata_with_mean_and_desc  = cbind(alldata_with_mean, activity_desc)
 
 # Writing tidy data in a file
-write.table(alldata_with_mean_and_desc, "./data/UCIHARDataset/tidy_data.txt", row.names=FALSE, quote = FALSE,sep="\t")
+write.table(alldata_with_mean_and_desc, "./tidy_data.txt", row.names=FALSE, quote = FALSE,sep="\t")
 
