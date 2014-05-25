@@ -1,10 +1,10 @@
 # load the dataset 
-X_train <- read.table("./data/UCIHARDataset/train/X_train.txt",header=FALSE)
-Y_train <- read.table("./data/UCIHARDataset/train/y_train.txt",header=FALSE)
-SUB_train <- read.table("./data/UCIHARDataset/train/subject_train.txt",header=FALSE)
-X_test <- read.table("./data/UCIHARDataset/test/X_test.txt",header=FALSE)
-Y_test <- read.table("./data/UCIHARDataset/test/y_test.txt",header=FALSE)
-SUB_test <- read.table("./data/UCIHARDataset/test/subject_test.txt",header=FALSE)
+X_train <- read.table("./UCI HAR Dataset/train/X_train.txt",header=FALSE)
+Y_train <- read.table("./UCI HAR Dataset/train/y_train.txt",header=FALSE)
+SUB_train <- read.table("./UCI HAR Dataset/train/subject_train.txt",header=FALSE)
+X_test <- read.table("./UCI HAR Dataset/test/X_test.txt",header=FALSE)
+Y_test <- read.table("./UCI HAR Dataset/test/y_test.txt",header=FALSE)
+SUB_test <- read.table("./UCI HAR Dataset/test/subject_test.txt",header=FALSE)
 
 # -----------------------------------------------------------------------------
 #1. Merges the training and the test sets to create one data set. 
@@ -15,7 +15,7 @@ test <- cbind(X_test,Y_test,SUB_test)
 allData <- rbind(train,test)
 
 # get the column names from features.txt
-dataColname <- read.table("./data//UCIHARDataset/features.txt", header=FALSE,stringsAsFactors = FALSE)
+dataColname <- read.table("./UCI HAR Dataset/features.txt", header=FALSE,stringsAsFactors = FALSE)
 cols <- dataColname[,2]
 othCols <- c("activity_lables","subject")
 final_cols <- c(cols,othCols)
@@ -32,7 +32,7 @@ alldata_subset = allData [,grep("mean\\(\\)|std\\(\\)|activity_lables|subject", 
 # -----------------------------------------------------------------------------
 #3. Uses descriptive activity names to name the activities in the data set
 # -----------------------------------------------------------------------------
-activity_labels = read.table("./data/UCIHARDataset/activity_labels.txt", stringsAsFactors=FALSE)
+activity_labels = read.table("./UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
 activityColName = c ("activity","activity_desc")
 
 colnames(activity_labels) <- activityColName
