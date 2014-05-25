@@ -17,6 +17,6 @@ Following files included:
 
 Usage of the script
 * pre-requisits of running the script
-	* The data should be stored in ./data/UCIHARDataset/ directory
+	* The data should be stored in your working directory ./UCI HAR Dataset/ directory
 * source(run_analysis.R)
 
