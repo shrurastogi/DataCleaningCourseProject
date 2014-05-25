@@ -49,7 +49,7 @@ alldata_subset_with_desc = cbind(alldata_subset, vector_activity_desc)
 # -----------------------------------------------------------------------------
 colnames (alldata_subset_with_desc) <- c(final_cols[grep("mean\\(\\)|std\\(\\)|activity_lables|subject", final_cols)], "activity_desc")
 
-
+# -----------------------------------------------------------------------------
 #5. Creates a second, independent tidy data set with the average of each 
 #   variable for each activity and each subject. 
 # -----------------------------------------------------------------------------
